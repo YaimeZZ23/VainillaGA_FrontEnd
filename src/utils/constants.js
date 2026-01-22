@@ -1,6 +1,6 @@
 // Constantes de la aplicación
 export const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://vainillaga-backend.onrender.com';
-export const LOGO_URL = `${API_BASE_URL}/logos/logo.png`;
+export const LOGO_URL = `${API_BASE_URL}/static/logos/logo.png`;
 
 export const ENDPOINTS = {
   // Autenticación
