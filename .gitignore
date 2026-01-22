@@ -6,9 +6,6 @@
 # Testing
 /coverage
 
-# Producción
-/build
-/dist
 
 # Variables de entorno
 .env
