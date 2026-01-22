@@ -4,24 +4,24 @@ export const LOGO_URL = `${API_BASE_URL}/logos/logo.png`;
 
 export const ENDPOINTS = {
   // Autenticación
-  REGISTER: 'api/auth/registro',
-  LOGIN: 'api/auth/login',
+  REGISTER: 'auth/registro',
+  LOGIN: 'auth/login',
   
   // Mangas
-  MANGAS: 'api/mangas/',
-  MANGA_DETAIL: 'api/mangas',
-  CHAPTERS: 'api/capitulos',
+  MANGAS: 'mangas/',
+  MANGA_DETAIL: 'mangas',
+  CHAPTERS: 'capitulos',
   
   // Personal
-  PERSONAL: 'api/personal/',
-  PERSONAL_MANGA: 'api/personal',
-  RECOMMENDATIONS: 'api/personal/recomendaciones',
+  PERSONAL: 'personal/',
+  PERSONAL_MANGA: 'personal',
+  RECOMMENDATIONS: 'personal/recomendaciones',
   
   // Usuarios
-  USER_INFO: 'api/usuarios/me',
+  USER_INFO: 'usuarios/me',
   
   // Comentarios
-  COMMENTS: 'api/comentarios'
+  COMMENTS: 'comentarios'
 };
 
 export const MANGA_STATES = {

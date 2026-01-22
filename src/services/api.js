@@ -6,7 +6,7 @@ import { API_BASE_URL } from '../utils/constants';
  */
 class ApiService {
   constructor() {
-    this.baseURL = API_BASE_URL+'/api';
+    this.baseURL = API_BASE_URL;
   }
 
   // Método genérico para hacer peticiones HTTP
