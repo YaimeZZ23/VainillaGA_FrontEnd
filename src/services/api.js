@@ -34,14 +34,14 @@ class ApiService {
       
       // Manejar respuestas no exitosas
       if (!response.ok) {
-        if (response.status === 401) {
-          // Token expirado, redirigir al login
-          localStorage.removeItem('token');
-          window.location.href = '/login';
-        }
-        
         const errorText = await response.text();
         let errorMessage = `Error ${response.status}: ${response.statusText}`;
+        
+        if (response.status === 401) {
+          // Eliminar token si existe
+          localStorage.removeItem('token');
+          errorMessage = 'Credenciales inválidas';
+        }
         
         try {
           const errorJson = JSON.parse(errorText);
