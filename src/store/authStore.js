@@ -29,10 +29,7 @@ const useAuthStore = create((set, get) => ({
   login: async (credentials) => {
     set({ loading: true });
     try {
-      // Verificar si el usuario es ZF o prueba
-      if (credentials.nombre_usuario !== 'ZF' && credentials.nombre_usuario !== 'prueba') {
-        throw new Error('Credenciales incorrectas');
-      }
+      
       
       const response = await apiService.login(credentials);
       const token = response.access_token;
@@ -42,7 +39,7 @@ const useAuthStore = create((set, get) => ({
       await get().initializeAuth()
       
     } catch (error) {
-      set({ error: 'Credenciales incorrectas', loading: false });
+      set({ error: error.message || 'Error al iniciar sesión', loading: false });
     }
   },
 
